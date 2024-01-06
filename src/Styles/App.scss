@@ -1,5 +1,8 @@
 @import './Colors.scss';
 
+// TODO: move constants to a separate file. 
+// Expected Benefit: Easier handling when constantants need to be changed. Constants become Reusable 
+
 body {
     color: $body-foreground;
     background-color: $body-background;
@@ -18,7 +21,7 @@ body {
   }
   th {
     border: 1px solid $table-border;
-    min-width: 100px;
+    min-width: 80px;
   }
   tr {
     text-align: center;
@@ -28,15 +31,76 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  div{
-    padding: 5px;
-  }
+  background-color: $table-background;
 }
 #BidTableHolder{
   display: flex;
   flex-direction: column;
   align-items: center;
-  div{
-    padding: 5px;
+  background-color: $table-background;
+}
+#AskHeader{
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  color: $ask-header-foreground;
+  div {
+    min-width: 80px;
+    text-align: center;
   }
+}
+#BidHeader{
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  color: $bid-header-foreground;
+  div {
+    min-width: 80px;
+    text-align: center;
+  }
+}
+.askRow{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 320px;
+  color: $row-text;
+  z-index: 2;
+  div {
+    min-width: 80px;
+    text-align: center;
+  }
+}
+.askBar{
+  height: 20px;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+  background-color: $ask-bar-background;
+  z-index: 1;
+}
+.bidRow{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 320px;
+  color: $row-text;
+  z-index: 2;
+  justify-items: center;
+  div {
+    min-width: 80px;
+    text-align: center;
+    
+  }
+}
+.bidBar{
+  height: 20px;
+  opacity: 0.7;
+  background-color: $bid-bar-background;
+  z-index: -1;
+}
+.rowHolder{
+  position: relative;
+  min-height: 20px;
+  width: 320px;
 }
