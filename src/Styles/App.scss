@@ -1,0 +1,42 @@
+@import './Colors.scss';
+
+body {
+    color: $body-foreground;
+    background-color: $body-background;
+  }
+
+#BookHolder{
+  display: flex;
+  flex-direction: row;
+}
+#TableStyle{
+  border: 1px solid $table-border;
+  border-collapse: collapse;
+  td {
+    border-left: 1px solid $table-border;
+
+  }
+  th {
+    border: 1px solid $table-border;
+    min-width: 100px;
+  }
+  tr {
+    text-align: center;
+  }
+}
+#AskTableHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    padding: 5px;
+  }
+}
+#BidTableHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div{
+    padding: 5px;
+  }
+}
