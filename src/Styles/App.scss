@@ -1,7 +1,5 @@
 @import './Colors.scss';
-
-// TODO: move constants to a separate file. 
-// Expected Benefit: Easier handling when constantants need to be changed. Constants become Reusable 
+@import './StyleConstants.scss';
 
 body {
     color: $body-foreground;
@@ -21,7 +19,7 @@ body {
   }
   th {
     border: 1px solid $table-border;
-    min-width: 80px;
+    min-width: $table-column-width;
   }
   tr {
     text-align: center;
@@ -42,20 +40,20 @@ body {
 #AskHeader{
   display: flex;
   flex-direction: row;
-  width: 320px;
+  width: $section-width;
   color: $ask-header-foreground;
   div {
-    min-width: 80px;
+    min-width: $table-column-width;
     text-align: center;
   }
 }
 #BidHeader{
   display: flex;
   flex-direction: row;
-  width: 320px;
+  width: $section-width;
   color: $bid-header-foreground;
   div {
-    min-width: 80px;
+    min-width: $table-column-width;
     text-align: center;
   }
 }
@@ -63,44 +61,44 @@ body {
   display: flex;
   flex-direction: row;
   position: absolute;
-  width: 320px;
+  width: $section-width;
   color: $row-text;
-  z-index: 2;
+  z-index: $row-z-index;
   div {
-    min-width: 80px;
+    min-width: $table-column-width;
     text-align: center;
   }
 }
 .askBar{
-  height: 20px;
+  height: $row-height;
   position: absolute;
   right: 0;
-  opacity: 0.7;
+  opacity: $bar-opacity;
   background-color: $ask-bar-background;
-  z-index: 1;
+  z-index: $bar-z-index;
 }
 .bidRow{
   display: flex;
   flex-direction: row;
   position: absolute;
-  width: 320px;
+  width: $section-width;
   color: $row-text;
-  z-index: 2;
+  z-index: $row-z-index;
   justify-items: center;
   div {
-    min-width: 80px;
+    min-width: $table-column-width;
     text-align: center;
     
   }
 }
 .bidBar{
-  height: 20px;
-  opacity: 0.7;
+  height: $row-height;
+  opacity: $bar-opacity;
   background-color: $bid-bar-background;
-  z-index: -1;
+  z-index: $bar-z-index;
 }
 .rowHolder{
   position: relative;
-  min-height: 20px;
-  width: 320px;
+  min-height: $row-height;
+  width: $section-width;
 }
